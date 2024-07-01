@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>About | Arban Workers</title>
+    <title>Design service | Arban Workers</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta content="" name="keywords" />
     <meta content="" name="description" />
@@ -116,9 +116,9 @@
     <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
       <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="index.html">Home</a>
     
-      <a class="px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-gray-200 rounded-lg dark-mode:bg-gray-700 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="about.html">About</a>
+      <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="about.html">About</a>
       <div @click.away="open = false" class="relative" x-data="{ open: false }">
-        <button @click="open = !open" class="flex flex-row items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:focus:bg-gray-600 dark-mode:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
+        <button @click="open = !open" class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
           <span>Services</span>
           <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
         </button>
@@ -149,179 +149,108 @@
     <!-- Page Header Start -->
     <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
-            <h1 class="display-1 text-white animated slideInDown">About Us</h1>
+            <h1 class="display-1 text-white animated slideInDown">Design service</h1>
             <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb text-uppercase mb-0">
                     <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
-                    <li class="breadcrumb-item text-primary active" aria-current="page">About</li>
+                    <li class="breadcrumb-item"><a class="text-white" href="#">Services</a></li>
+                    <li class="breadcrumb-item  text-white" aria-current="page">Design service</li>
                 </ol>
             </nav>
         </div>
     </div>
     <!-- Page Header End -->
 
+ 
+   <!-- Service Start -->
+  <!-- component -->
+<section class="bg-white dark:bg-gray-900">
+  <div class="container px-6 py-10 mx-auto">
+    <h4 class="section-title text-4xl"> Our Design service</h4>
+    <h1 class="display-5 mb-4">
+      Explore Our Urban Workers Design service Directory
+    </h1>
+      
+      <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-16 md:grid-cols-2 xl:grid-cols-4">
 
-    <!-- About Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
-                    <div class="about-img">
-                        <img class="img-fluid" src="img/about-1.jpg" alt="">
-                        <img class="img-fluid" src="img/about-2.jpg" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                    <h4 class="section-title">About Us</h4>
-                    <h1 class="display-5 mb-4">A Creative Architecture Agency For Your Dream Home</h1>
-                    <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                    <p class="mb-4">Stet no et lorem dolor et diam, amet duo ut dolore vero eos. No stet est diam rebum amet diam ipsum. Clita clita labore, dolor duo nonumy clita sit at, sed sit sanctus dolor eos.</p>
-                    <div class="d-flex align-items-center mb-5">
-                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center border border-5 border-primary" style="width: 120px; height: 120px;">
-                            <h1 class="display-1 mb-n2" data-toggle="counter-up">25</h1>
-                        </div>
-                        <div class="ps-4">
-                            <h3>Years</h3>
-                            <h3>Working</h3>
-                            <h3 class="mb-0">Experience</h3>
-                        </div>
-                    </div>
-                    <a class="btn btn-primary py-3 px-5" href="">Read More</a>
-                </div>
+          <div class="flex flex-col items-center p-8 transition-colors duration-200 bg-gray-200 rounded-xl transform cursor-pointer group hover:bg-blue-600 rounded-xl">
+             <a href="appointment.html"><img class="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300" src="img/icons/drilling.png" alt="a"></a>
+             <a href="appointment.html"><h1 class="mt-4 text-2xl font-semibold text-gray-700 capitalize group-hover:text-white">Earth work by machine </h1></a>           
             </div>
-        </div>
-    </div>
-    <!-- About End -->
 
+           <div class="flex flex-col items-center p-8 transition-colors duration-200 bg-gray-200 rounded-xl transform cursor-pointer group hover:bg-blue-600 rounded-xl">
+               <a href="appointment.html"><img class="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300" src="img/icons/drilling.png" alt=""></a>
+            
+               <a href="appointment.html"><h1 class="mt-4 text-2xl font-semibold text-gray-700 capitalize group-hover:text-white">Earth work by machine </h1></a>
+         </div>
 
-    <!-- Feature Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <h4 class="section-title">Why Choose Us!</h4>
-                    <h1 class="display-5 mb-4">Why You Should Trust Us? Learn More About Us!</h1>
-                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                    <div class="row g-4">
-                        <div class="col-12">
-                            <div class="d-flex align-items-start">
-                                <img class="flex-shrink-0" src="img/icons/icon-2.png" alt="Icon">
-                                <div class="ms-4">
-                                    <h3>Design Approach</h3>
-                                    <p class="mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="d-flex align-items-start">
-                                <img class="flex-shrink-0" src="img/icons/icon-3.png" alt="Icon">
-                                <div class="ms-4">
-                                    <h3>Innovative Solutions</h3>
-                                    <p class="mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="d-flex align-items-start">
-                                <img class="flex-shrink-0" src="img/icons/icon-4.png" alt="Icon">
-                                <div class="ms-4">
-                                    <h3>Project Management</h3>
-                                    <p class="mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="feature-img">
-                        <img class="img-fluid" src="img/about-2.jpg" alt="">
-                        <img class="img-fluid" src="img/about-1.jpg" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Feature End -->
+         <div class="flex flex-col items-center p-8 transition-colors duration-200 bg-gray-200 rounded-xl transform cursor-pointer group hover:bg-blue-600 rounded-xl">
+             <a href="appointment.html"><img class="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300" src="img/icons/drilling.png" alt=""></a>
+          
+             <a href="appointment.html"><h1 class="mt-4 text-2xl font-semibold text-gray-700 capitalize group-hover:text-white">Earth work by machine </h1></a>
+       </div>
 
-
-    <!-- Team Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                <h4 class="section-title">Team Members</h4>
-                <h1 class="display-5 mb-4">We Are Creative Architecture Team For Your Dream Home</h1>
-            </div>
-            <div class="row g-0 team-items">
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item position-relative">
-                        <div class="position-relative">
-                            <img class="img-fluid" src="img/team-1.jpg" alt="">
-                            <div class="team-social text-center">
-                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="bg-light text-center p-4">
-                            <h3 class="mt-2">Architect Name</h3>
-                            <span class="text-primary">Designation</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="team-item position-relative">
-                        <div class="position-relative">
-                            <img class="img-fluid" src="img/team-2.jpg" alt="">
-                            <div class="team-social text-center">
-                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="bg-light text-center p-4">
-                            <h3 class="mt-2">Architect Name</h3>
-                            <span class="text-primary">Designation</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="team-item position-relative">
-                        <div class="position-relative">
-                            <img class="img-fluid" src="img/team-3.jpg" alt="">
-                            <div class="team-social text-center">
-                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="bg-light text-center p-4">
-                            <h3 class="mt-2">Architect Name</h3>
-                            <span class="text-primary">Designation</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="team-item position-relative">
-                        <div class="position-relative">
-                            <img class="img-fluid" src="img/team-4.jpg" alt="">
-                            <div class="team-social text-center">
-                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="bg-light text-center p-4">
-                            <h3 class="mt-2">Architect Name</h3>
-                            <span class="text-primary">Designation</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Team End -->
+       <div class="flex flex-col items-center p-8 transition-colors duration-200 bg-gray-200 rounded-xl transform cursor-pointer group hover:bg-blue-600 rounded-xl">
+           <a href="appointment.html"><img class="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300" src="img/icons/drilling.png" alt=""></a>
         
+           <a href="appointment.html"><h1 class="mt-4 text-2xl font-semibold text-gray-700 capitalize group-hover:text-white">Earth work by machine </h1></a>
+     </div>
+
+     <div class="flex flex-col items-center p-8 transition-colors duration-200 bg-gray-200 rounded-xl transform cursor-pointer group hover:bg-blue-600 rounded-xl">
+                 <a href="appointment.html"><img class="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300" src="img/icons/drilling.png" alt=""></a>
+              
+                 <a href="appointment.html"><h1 class="mt-4 text-2xl font-semibold text-gray-700 capitalize group-hover:text-white">Earth work by machine </h1></a>
+           </div>
+
+           <div class="flex flex-col items-center p-8 transition-colors duration-200 bg-gray-200 rounded-xl transform cursor-pointer group hover:bg-blue-600 rounded-xl">
+               <a href="appointment.html"><img class="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300" src="img/icons/drilling.png" alt=""></a>
+            
+               <a href="appointment.html"><h1 class="mt-4 text-2xl font-semibold text-gray-700 capitalize group-hover:text-white">Earth work by machine </h1></a>
+         </div>
+
+         <div class="flex flex-col items-center p-8 transition-colors duration-200 bg-gray-200 rounded-xl transform cursor-pointer group hover:bg-blue-600 rounded-xl">
+             <a href="appointment.html"><img class="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300" src="img/icons/drilling.png" alt=""></a>
+          
+             <a href="appointment.html"><h1 class="mt-4 text-2xl font-semibold text-gray-700 capitalize group-hover:text-white">Earth work by machine </h1></a>
+       </div>
+
+       <div class="flex flex-col items-center p-8 transition-colors duration-200 bg-gray-200 rounded-xl transform cursor-pointer group hover:bg-blue-600 rounded-xl">
+           <a href="appointment.html"><img class="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300" src="img/icons/drilling.png" alt=""></a>
+        
+           <a href="appointment.html"><h1 class="mt-4 text-2xl font-semibold text-gray-700 capitalize group-hover:text-white">Earth work by machine </h1></a>
+     </div>
+
+     <div class="flex flex-col items-center p-8 transition-colors duration-200 bg-gray-200 rounded-xl transform cursor-pointer group hover:bg-blue-600 rounded-xl">
+         <a href="appointment.html"><img class="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300" src="img/icons/drilling.png" alt=""></a>
+      
+         <a href="appointment.html"><h1 class="mt-4 text-2xl font-semibold text-gray-700 capitalize group-hover:text-white">Earth work by machine </h1></a>
+   </div>
+
+   <div class="flex flex-col items-center p-8 transition-colors duration-200 bg-gray-200 rounded-xl transform cursor-pointer group hover:bg-blue-600 rounded-xl">
+       <a href="appointment.html"><img class="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300" src="img/icons/drilling.png" alt=""></a>
+    
+       <a href="appointment.html"><h1 class="mt-4 text-2xl font-semibold text-gray-700 capitalize group-hover:text-white">Earth work by machine </h1></a>
+ </div>
+
+ <div class="flex flex-col items-center p-8 transition-colors duration-200 bg-gray-200 rounded-xl transform cursor-pointer group hover:bg-blue-600 rounded-xl">
+     <a href="appointment.html"><img class="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300" src="img/icons/drilling.png" alt=""></a>
+  
+     <a href="appointment.html"><h1 class="mt-4 text-2xl font-semibold text-gray-700 capitalize group-hover:text-white">Earth work by machine </h1></a>
+</div>
+
+<div class="flex flex-col items-center p-8 transition-colors duration-200 bg-gray-200 rounded-xl transform cursor-pointer group hover:bg-blue-600 rounded-xl">
+     <a href="appointment.html"><img class="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300" src="img/icons/drilling.png" alt=""></a>
+  
+     <a href="appointment.html"><h1 class="mt-4 text-2xl font-semibold text-gray-700 capitalize group-hover:text-white">Earth work by machine </h1></a>
+</div>
+
+
+      </div>
+  </div>
+</section>
+<!-- Service End -->
+
+ 
 
    <!-- Footer Start -->
    <div
