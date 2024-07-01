@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Arkitektur - Architecture Website</title>
+    <title>Home | Arban Workers</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta content="" name="keywords" />
     <meta content="" name="description" />
@@ -41,6 +41,9 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+    
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
   </head>
 
   <body>
@@ -56,7 +59,7 @@
       ></div>
       <img
         class="position-absolute top-50 start-50 translate-middle"
-        src="img/icons/icon-1.png"
+        src="img/icons/logo.png"
         alt="Icon"
       />
     </div>
@@ -68,19 +71,16 @@
         <div class="col-lg-7 px-5 text-start">
           <div class="h-100 d-inline-flex align-items-center py-3 me-3">
             <a class="text-body px-2" href="tel:+0123456789"
-              ><i class="fa fa-phone-alt text-primary me-2"></i>+012 345 6789</a
+              ><i class="fa fa-phone-alt text-primary me-2"></i
+              >+91-9984906927</a
             >
-            <a class="text-body px-2" href="mailto:info@example.com"
+            <a class="text-body px-2" href="mailto:arbanworkers24x7@gmail.com"
               ><i class="fa fa-envelope-open text-primary me-2"></i
-              >info@example.com</a
+              >arbanworkers24x7@gmail.com</a
             >
           </div>
         </div>
         <div class="col-lg-5 px-5 text-end">
-          <div class="h-100 d-inline-flex align-items-center py-3 me-2">
-            <a class="text-body px-2" href="">Terms</a>
-            <a class="text-body px-2" href="">Privacy</a>
-          </div>
           <div class="h-100 d-inline-flex align-items-center">
             <a class="btn btn-sm-square btn-outline-body me-1" href=""
               ><i class="fab fa-facebook-f"></i
@@ -101,141 +101,83 @@
     <!-- Topbar End -->
 
     <!-- Navbar Start -->
-    <nav
-      class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-lg-0 px-lg-5 wow fadeIn"
-      data-wow-delay="0.1s"
-    >
-      <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
-        <h1 class="text-primary m-0">
-          <img class="me-3" src="img/icons/icon-1.png" alt="Icon" />Arkitektur
-        </h1>
-      </a>
-      <button
-        type="button"
-        class="navbar-toggler me-4"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarCollapse"
-      >
-        <span class="navbar-toggler-icon"></span>
+ <!-- component -->
+
+<div class="w-full text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800">
+  <div x-data="{ open: false }" class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
+    <div class="p-4 flex flex-row items-center justify-between">
+      <a href="index.html" class="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline"><img src="img/icons/logo.png" alt=""></a>
+      <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
+        <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+          <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+          <path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+        </svg>
       </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <div class="navbar-nav ms-auto p-4 p-lg-0">
-          <a href="index.html" class="nav-item nav-link active">Home</a>
-          <a href="about.html" class="nav-item nav-link">About</a>
-          <a href="service.html" class="nav-item nav-link">Services</a>
-          <div class="nav-item dropdown">
-            <a
-              href="#"
-              class="nav-link dropdown-toggle"
-              data-bs-toggle="dropdown"
-              >Pages</a
-            >
-            <div class="dropdown-menu border-0 m-0">
-              <a href="feature.html" class="dropdown-item">Our Features</a>
-              <a href="project.html" class="dropdown-item">Our Projects</a>
-              <a href="team.html" class="dropdown-item">Team Members</a>
-              <a href="appointment.html" class="dropdown-item">Appointment</a>
-              <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-              <a href="404.html" class="dropdown-item">404 Page</a>
-            </div>
+    </div>
+    <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
+      <a class="px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-gray-200 rounded-lg dark-mode:bg-gray-700 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="index.html">Home</a>
+    
+      <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="about.html">About</a>
+      <div @click.away="open = false" class="relative" x-data="{ open: false }">
+        <button @click="open = !open" class="flex flex-row items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:focus:bg-gray-600 dark-mode:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
+          <span>Services</span>
+          <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        </button>
+        <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48">
+          <div class="px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-800">
+            <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Service & consultancy</a>
+            <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Material Trading</a>
+            
+            <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Home service</a>
+
+            <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Design service</a>
+
+            <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Interior service</a>
+
           </div>
-          <a href="contact.html" class="nav-item nav-link">Contact</a>
         </div>
-        <a
-          href="index.html"
-          class="btn btn-primary py-2 px-4 d-none d-lg-block"
-          >Call Now</a
-        >
-      </div>
+      </div> 
+      <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Contact</a>
+       
     </nav>
+  </div>
+</div>
+
     <!-- Navbar End -->
 
     <!-- Carousel Start -->
-    <div class="container-fluid p-0 pb-5 wow fadeIn" data-wow-delay="0.1s">
-      <div class="owl-carousel header-carousel position-relative">
-        <div
-          class="owl-carousel-item position-relative"
-          data-dot="<img src='img/carousel-1.jpg'>"
-        >
-          <img class="img-fluid" src="img/carousel-1.jpg" alt="" />
-          <div class="owl-carousel-inner">
-            <div class="container">
-              <div class="row justify-content-start">
-                <div class="col-10 col-lg-8">
-                  <h1 class="display-1 text-white animated slideInDown">
-                    Best Architecture And Interior Design Services
-                  </h1>
-                  <p class="fs-5 fw-medium text-white mb-4 pb-3">
-                    Vero elitr justo clita lorem. Ipsum dolor at sed stet sit
-                    diam no. Kasd rebum ipsum et diam justo clita et kasd rebum
-                    sea elitr.
-                  </p>
-                  <a
-                    href=""
-                    class="btn btn-primary py-3 px-5 animated slideInLeft"
-                    >Read More</a
-                  >
-                </div>
-              </div>
-            </div>
+
+
+    <section class="text-gray-600 body-font">
+      <div class="container mx-auto flex px-5 md:flex-row flex-col items-center">
+        <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+          <h1 class="title-font sm:text-4xl text-4xl mb-4 font-medium text-gray-900">Building Better Homes with Professional Services and Creative Design</h1>
+          <p class="mb-8 leading-relaxed">Welcome to Arban Workers – Your Trusted Partner for Comprehensive Home Solutions. Offering Expert Service & Consultancy, Quality Material Trading, Reliable Home Services, Innovative Design, and Bespoke Interior Services. Transforming Homes with Professionalism, Excellence, and a Commitment to Your Vision. Let Us Bring Your Dream Home to Life with Our Skilled Team and Top-Quality Services.</p>
+           
+          <div class="flex lg:flex-row md:flex-col">
+            <button class="bg-gray-100 inline-flex py-3 px-5 rounded-lg items-center hover:bg-gray-200 focus:outline-none">
+            <img src="img/icons/icon-5.png" alt="">
+              <span class="ml-4 flex items-start flex-col leading-none">
+                <!-- <span class="text-xs text-gray-600 mb-1">GET IT ON</span> -->
+                <span class="title-font font-medium">Architectural Services</span>
+              </span>
+            </button>
+            <button class="bg-gray-100 inline-flex py-3 px-5 rounded-lg items-center lg:ml-4 md:ml-0 ml-4 md:mt-4 mt-0 lg:mt-0 hover:bg-gray-200 focus:outline-none">
+              <img src="img/icons/icon-9.png" alt="">
+              <span class="ml-4 flex items-start flex-col leading-none">
+                <!-- <span class="text-xs text-gray-600 mb-1"> fffff</span> -->
+                <span class="title-font font-medium">Household
+                  Services</span>
+              </span>
+            </button>
           </div>
         </div>
-        <div
-          class="owl-carousel-item position-relative"
-          data-dot="<img src='img/carousel-2.jpg'>"
-        >
-          <img class="img-fluid" src="img/carousel-2.jpg" alt="" />
-          <div class="owl-carousel-inner">
-            <div class="container">
-              <div class="row justify-content-start">
-                <div class="col-10 col-lg-8">
-                  <h1 class="display-1 text-white animated slideInDown">
-                    Best Architecture And Interior Design Services
-                  </h1>
-                  <p class="fs-5 fw-medium text-white mb-4 pb-3">
-                    Vero elitr justo clita lorem. Ipsum dolor at sed stet sit
-                    diam no. Kasd rebum ipsum et diam justo clita et kasd rebum
-                    sea elitr.
-                  </p>
-                  <a
-                    href=""
-                    class="btn btn-primary py-3 px-5 animated slideInLeft"
-                    >Read More</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="owl-carousel-item position-relative"
-          data-dot="<img src='img/carousel-3.jpg'>"
-        >
-          <img class="img-fluid" src="img/carousel-3.jpg" alt="" />
-          <div class="owl-carousel-inner">
-            <div class="container">
-              <div class="row justify-content-start">
-                <div class="col-10 col-lg-8">
-                  <h1 class="display-1 text-white animated slideInDown">
-                    Best Architecture And Interior Design Services
-                  </h1>
-                  <p class="fs-5 fw-medium text-white mb-4 pb-3">
-                    Vero elitr justo clita lorem. Ipsum dolor at sed stet sit
-                    diam no. Kasd rebum ipsum et diam justo clita et kasd rebum
-                    sea elitr.
-                  </p>
-                  <a
-                    href=""
-                    class="btn btn-primary py-3 px-5 animated slideInLeft"
-                    >Read More</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+          <img class="object-cover object-center rounded" alt="hero" src="img/home-bannar.png">
         </div>
       </div>
-    </div>
+    </section>
+
     <!-- Carousel End -->
 
     <!-- Facts Start -->
@@ -532,7 +474,7 @@
     <!-- Feature End -->
 
     <!-- Project Start -->
-    <div class="container-xxl project py-5">
+    <!-- <div class="container-xxl project py-5">
       <div class="container">
         <div
           class="text-center mx-auto mb-5 wow fadeInUp"
@@ -749,7 +691,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <!-- Project End -->
 
     <!-- Team Start -->
@@ -884,7 +826,7 @@
                   </div>
                   <div class="ms-4">
                     <p class="mb-2">Call Us Now</p>
-                    <h3 class="mb-0">+012 345 6789</h3>
+                    <h3 class="mb-0">+91-9984906927</h3>
                   </div>
                 </div>
               </div>
@@ -898,7 +840,7 @@
                   </div>
                   <div class="ms-4">
                     <p class="mb-2">Mail Us Now</p>
-                    <h3 class="mb-0">info@example.com</h3>
+                    <h3 class="mb-0">arbanworkers24x7@gmail.com</h3>
                   </div>
                 </div>
               </div>
@@ -1046,33 +988,12 @@
     >
       <div class="container py-5">
         <div class="row g-5">
-          <div class="col-lg-3 col-md-6">
-            <h3 class="text-light mb-4">Address</h3>
-            <p class="mb-2">
-              <i class="fa fa-map-marker-alt text-primary me-3"></i>123 Street,
-              New York, USA
-            </p>
-            <p class="mb-2">
-              <i class="fa fa-phone-alt text-primary me-3"></i>+012 345 67890
-            </p>
-            <p class="mb-2">
-              <i class="fa fa-envelope text-primary me-3"></i>info@example.com
-            </p>
-            <div class="d-flex pt-2">
-              <a class="btn btn-square btn-outline-body me-1" href=""
-                ><i class="fab fa-twitter"></i
-              ></a>
-              <a class="btn btn-square btn-outline-body me-1" href=""
-                ><i class="fab fa-facebook-f"></i
-              ></a>
-              <a class="btn btn-square btn-outline-body me-1" href=""
-                ><i class="fab fa-youtube"></i
-              ></a>
-              <a class="btn btn-square btn-outline-body me-0" href=""
-                ><i class="fab fa-linkedin-in"></i
-              ></a>
-            </div>
+             <div class="col-lg-3 col-md-6">
+            <h3 class="text-light mb-4">Arban Workers</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur distinctio, eveniet molestiae tempore modi quibusdam nam nulla similique quo voluptatum cumque voluptate accusamus odit esse..</p>
+            
           </div>
+   
           <div class="col-lg-3 col-md-6">
             <h3 class="text-light mb-4">Services</h3>
             <a class="btn btn-link" href="">Architecture</a>
@@ -1083,27 +1004,40 @@
           </div>
           <div class="col-lg-3 col-md-6">
             <h3 class="text-light mb-4">Quick Links</h3>
-            <a class="btn btn-link" href="">About Us</a>
-            <a class="btn btn-link" href="">Contact Us</a>
+            <a class="btn btn-link" href="about.html">About Us</a>
+            <a class="btn btn-link" href="contact.html">Contact Us</a>
             <a class="btn btn-link" href="">Our Services</a>
             <a class="btn btn-link" href="">Terms & Condition</a>
             <a class="btn btn-link" href="">Support</a>
           </div>
           <div class="col-lg-3 col-md-6">
-            <h3 class="text-light mb-4">Newsletter</h3>
-            <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
-            <div class="position-relative mx-auto" style="max-width: 400px">
-              <input
-                class="form-control bg-transparent w-100 py-3 ps-4 pe-5"
-                type="text"
-                placeholder="Your email"
-              />
-              <button
-                type="button"
-                class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2"
-              >
-                SignUp
-              </button>
+            <h3 class="text-light mb-4">Address</h3>
+            <p class="mb-2">
+              <i class="fa fa-map-marker-alt text-primary me-3"></i>188 Kahlon
+              Garden City, Sector 12, Vrindahvan Colony, Lucknow
+            </p>
+            <p class="mb-2">
+              <i class="fa fa-phone-alt text-primary me-3"></i>+91-99849069270
+            </p>
+            <p class="mb-2">
+              <i class="fa fa-envelope text-primary me-3"></i
+              >arbanworkers24x7@gmail.com
+            </p>
+            <div class="d-flex pt-2">
+              <a class="btn btn-square btn-outline-body me-1" href=""
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a
+                class="btn btn-square btn-outline-body me-1"
+                href="https://www.facebook.com/profile.php?id=61558395141961&mibextid=ZbWKwL"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a class="btn btn-square btn-outline-body me-1" href="https://www.instagram.com/arban_workers?igsh=NTc4MTIwNjQ2YQ=="
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a class="btn btn-square btn-outline-body me-0" href=""
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
             </div>
           </div>
         </div>
